@@ -18,6 +18,20 @@ module.exports = {
   */
   loading: { color: '#3B8070' },
   /*
+  ** CSS
+  */
+  css: [
+    { src: '~/assets/scss/main.scss', lang: 'scss' },
+    'tachyons/css/tachyons.min.css',
+    // 'tachyons-debug/css/tachyons-debug.min.css'
+  ],
+  /*
+  ** Plugins
+  */
+  plugins: [
+    '~/plugins/filters'
+  ],
+  /*
   ** Build configuration
   */
   build: {
@@ -33,6 +47,7 @@ module.exports = {
           exclude: /(node_modules)/
         })
       }
-    }
+    },
+    vendor: ['axios']
   }
 }
